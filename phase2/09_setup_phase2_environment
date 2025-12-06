@@ -1,0 +1,16 @@
+!pip install gensim emoji pandas nltk bs4
+
+import re
+import json
+from collections import Counter, defaultdict
+
+import pandas as pd
+import emoji
+from gensim.models import Word2Vec
+import numpy as np
+import nltk
+from bs4 import BeautifulSoup
+
+nltk.download('punkt')
+
+print("Dependencies installed.")
