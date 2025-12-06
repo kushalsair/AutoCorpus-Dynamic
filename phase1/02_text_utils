@@ -1,0 +1,11 @@
+def extract_emojis(text):
+    return emoji.distinct_emoji_list(text)
+
+def clean_text(text):
+    # Remove emoji
+    no_emoji = emoji.replace_emoji(text, replace="")
+    # Convert HTML to plain text
+    return BeautifulSoup(no_emoji, "html.parser").get_text()
+
+def epoch_to_time(ts):
+    return datetime.utcfromtimestamp(ts).isoformat()
